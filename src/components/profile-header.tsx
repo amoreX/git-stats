@@ -1,7 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 import { ExternalLink } from "lucide-react"
-import CommitGraph from "@/components/commit-charts" 
 
 interface ProfileHeaderProps {
   userData: {
