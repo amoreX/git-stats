@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 import { ExternalLink } from "lucide-react"
+import CommitGraph from "@/components/commit-charts" 
 
 interface ProfileHeaderProps {
   userData: {
@@ -17,8 +18,8 @@ interface ProfileHeaderProps {
 
 export default function ProfileHeader({ userData }: ProfileHeaderProps) {
   return (
-    <div className="flex flex-row">
-      <Card className="w-1/2">
+    
+      <Card >
         <CardContent className="pt-6 ">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <Avatar className="h-24 w-24">
@@ -51,11 +52,6 @@ export default function ProfileHeader({ userData }: ProfileHeaderProps) {
           </div>
         </CardContent>
       </Card>
-
-      <div className="w-1/2">
-        
-        p
-      </div>
-    </div>
+    
   )
 }
