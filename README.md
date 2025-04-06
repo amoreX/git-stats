@@ -54,7 +54,7 @@ Follow these steps to set up and run the project locally:
    yarn dev
    ```
 
-2. Open your browser and navigate to `http://localhost:3000`.
+2. Open your browser and navigate to `http://localhost:3000` or `http://localhost:5173` as mentioned in the console.
 
 ### Building for Production
 
