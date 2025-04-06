@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { ExternalLink, GitFork, Star } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import LoadingSkeleton from "@/components/loading-skeleton"
+import ProfileHeader from "@/components/profile-header" // Import the new component
 
 interface ProfileDisplayProps {
   username: string
@@ -97,39 +97,7 @@ export default function ProfileDisplay({ username, onLoadingChange }: ProfileDis
 
   return (
     <div className="space-y-8">
-      <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-            <Avatar className="h-24 w-24">
-              <AvatarImage src={userData.avatar_url} alt={userData.login} />
-              <AvatarFallback>{userData.login.substring(0, 2).toUpperCase()}</AvatarFallback>
-            </Avatar>
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-2xl font-bold">{userData.name || userData.login}</h2>
-              <a
-                href={userData.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground flex items-center justify-center md:justify-start gap-1 hover:underline"
-              >
-                @{userData.login} <ExternalLink className="h-3 w-3" />
-              </a>
-              {userData.bio && <p className="mt-2">{userData.bio}</p>}
-              <div className="flex gap-4 mt-4 justify-center md:justify-start">
-                <div>
-                  <span className="font-semibold">{userData.public_repos}</span> repositories
-                </div>
-                <div>
-                  <span className="font-semibold">{userData.followers}</span> followers
-                </div>
-                <div>
-                  <span className="font-semibold">{userData.following}</span> following
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      <ProfileHeader userData={userData} /> 
 
       <div className="grid gap-4">
         {repos.length === 0 ? (
