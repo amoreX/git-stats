@@ -87,13 +87,13 @@ export default function CommitsChart({ username }: CommitsChartProps) {
   }
 
   // Format dates for display
-  const formattedData = commitData.map((item) => ({
-    ...item,
-    formattedDate: new Date(item.date).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-    }),
-  }))
+  // const formattedData = commitData.map((item) => ({
+  //   ...item,
+  //   formattedDate: new Date(item.date).toLocaleDateString("en-US", {
+  //     month: "short",
+  //     day: "numeric",
+  //   }),
+  // }))
 
   return (
     <div className="w-full h-[400px]">
