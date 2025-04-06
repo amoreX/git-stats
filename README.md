@@ -1,55 +1,93 @@
-# React + TypeScript + Vite
+# Git Stats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Git Stats is a web application that displays GitHub user statistics in a visually appealing and user-friendly manner. It provides information such as the user's profile details, repositories, followers, and following count.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display GitHub user profile information, including avatar, name, bio, and username.
+- Show statistics like the number of public repositories, followers, and following.
+- Responsive design for both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Frontend framework for building the user interface.
+- **TypeScript**: For type safety and better developer experience.
+- **Tailwind CSS**: For styling the components.
+- **Lucide React**: For icons used in the application.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+Follow these steps to set up and run the project locally:
+
+### Prerequisites
+
+- Node.js (v16 or later)
+- npm or yarn package manager
+- A GitHub personal access token (if required for API requests)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/git-stats.git
+   cd git-stats
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+
+### Running the Application
+
+1. Start the development server:
+   ```bash
+   npm start
+   # or
+   npm run dev
+   # or
+   yarn start
+   # or
+   yarn dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000`.
+
+### Building for Production
+
+To create a production build, run:
+```bash
+npm run build
+# or
+yarn build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The optimized build will be available in the `build` directory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Folder Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
-# git-stats
+/src
+  /components       # Reusable React components
+  /pages            # Application pages
+  /styles           # Global styles
+  /utils            # Utility functions
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push the branch.
+4. Open a pull request.
+
+
+## Acknowledgments
+
+- [GitHub API](https://docs.github.com/en/rest) for providing user data.
+- [Lucide Icons](https://lucide.dev/) for the icons used in the project.
