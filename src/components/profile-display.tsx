@@ -98,7 +98,7 @@ export default function ProfileDisplay({ username, onLoadingChange }: ProfileDis
   return (
     <div className="space-y-8">
       <ProfileHeader userData={userData} /> 
-
+    
       <div className="grid gap-4">
         {repos.length === 0 ? (
           <Card>
